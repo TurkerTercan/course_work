@@ -1,0 +1,52 @@
+Nis 02, 2020 8:08:41 ÖS HW3.testSimpleTextEditor main
+INFO: HW3 LOG
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Smaller Text File
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: List is an ArrayList and iterator is used:
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Read Time: 1209700
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Add Time: 42800
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Find Time: 20300
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Replace Time: 235300
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Total Time:1508100
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: List is an ArrayList and iterator is not used: 
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Read Time: 302200
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Add Time: 30000
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Find Time: 33900
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Replace Time: 75700
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Total Time:441800
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: List is a LinkedList and iterator is used
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Read Time: 655500
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Add Time: 33300
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Find Time: 35400
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Replace Time: 159400
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Total Time:883600
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: List is a LinkedList and iterator is not used
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Read Time: 284500
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Add Time: 33300
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Find Time: 31600
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Replace Time: 965100
+Nis 02, 2020 8:09:09 ÖS HW3.testSimpleTextEditor main
+INFO: Total Time:1314500

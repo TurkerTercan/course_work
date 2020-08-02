@@ -1,0 +1,170 @@
+@startuml
+
+interface DataInterface<E> {
++isAlone() : boolean
++increase() :
++decrease() :
++getValue() : int
++getCount() : int
+}
+
+class AgeData {
++age : int
++people : int
++isAlone() : boolean
++increase() :
++decrease() :
++getValue() : int
++getCount() : int
++toString() : String
+}
+
+class BinaryTree<E>{
+#root : Node<E>
++getLeftSubtree() : BinaryTree<E>
++getRightSubtree() : BinaryTree<E>
++getData() : E
++isLeaf() : boolean
++toString() : String
+-preOrderTraverse(Node<E>, int, StringBuilder) :
++{static}readBinaryTree(Scanner): BinaryTree<String>
+}
+
+class Node<E>{
+#data : E
+#left : Node<E>
+#right : Node<E>
++toString() : String
+}
+
+interface SearchTree{
++add(E) : boolean
++contains(E) : boolean
++find(E) : E
++delete(E) : E
++remove(E) : boolean
+}
+
+class BinarySearchTree<E extends Comparable<E>> {
+#addReturn : boolean
+#deleteReturn : E
++add(E) : boolean
+-add(Node<E>, E) : Node<E>
++contains(E) : boolean
+-contains(Node<E>, E) : boolean
++find(E) : E
+-find(Node<E>, E) : E
++delete(E) : E
+-delete(Node<E>, E) : Node<E>
+#findLargestChild(Node<E>) : E
++remove(E) : boolean
+}
+
+class FileSystemTree{
+#root : FileNode
+#removeScan : Scanner
++addDir(String) :
+-addDir(String[], FileNode, int) :
++addFile(String) :
+-addFile(String[], FileNode, int) :
++toString() : String
++printFileSystem() :
+-print(FileNode, StringBuilder, int) :
++remove(String) :
+-remove(String[], FileNode, int) :
+-moveElements(FileNode, FileNode) :
+-removeElements(FileNode) :
+-search(FileNode, FileNode, String) :
+-printNode(FileNode, FileNode, ArrayList<String>) :
+}
+
+#class FileNode{
+#data : String
+#nodes : FileNode[]
+#capacity : int
+#used : int
+#isFile : boolean
++isFile() : boolean
++hasCapacity() : boolean
++resize() :
++toString() : String
++removeNode(int) :
+}
+
+class ExpressionTree{
+-isPostFix : boolean
+-{static} OPERATORS : String
++{static} readBinaryTree(Scanner) : BinaryTree<String>
++{static} isOperator(char) : boolean
+-reverseString(String) : String
++toString() : String
++toString2() : String
+-preOrderTraverse(Node<String>, StringBuilder) :
+-postOrderTraverse(Node<String>, StringBuilder) :
++eval() : int
+-operate(char, int, int) : int
+-evalPrefix(Node<String>) : int
+-{static} isNumber(String) : boolean
+-evalPostfix(Node<String>) : int
+}
+
+class SyntaxErrorException{
+}
+
+class AgeSearchTree<E extends DataInterface>{
+-isFound : boolean
+-size : int
++add(E) : boolean
+-add(Node<E>, E) : Node<E>
++delete(E) : E
+-delete(Node<E>, E) : Node<E>
++remove(E) : boolean
++youngerThan(int) : int
+-youngerThan(Node<E>, int) : int
+-countChildren(Node<E>) : int
++olderThan(int) : int
++toString() : String
+-preOrderTraverse(Node<E>, StringBuilder) :
+}
+
+class MaxHeap<E extends DataInterface>{
+-table : ArrayList<E>
+-comparator : Comparator<E>
++add(E) :
++remove(int) :
+-getIndex(int) : int
+-compare(int, int) : int
+-swap(int, int) :
++find(E) : E
++youngerThan(int) : int
++olderThan(int) : int
++toString() : String
+}
+
+class MyComparator<E extends DataInterface>{
++compare(E, E) : int
+}
+
+interface Comparator
+
+MaxHeap <|-- DataInterface
+MyComparator <|-- DataInterface
+MyComparator <|.. Comparator
+MaxHeap *-- MyComparator
+AgeSearchTree <|-- BinarySearchTree
+ExpressionTree *-- SyntaxErrorException
+SyntaxErrorException <|-- Exception
+ExpressionTree <|-- BinaryTree
+FileSystemTree *-- FileNode
+BinarySearchTree <|-- BinaryTree
+BinarySearchTree <|.. SearchTree
+interface Serializable
+BinaryTree *-- Node
+BinaryTree <|.. Serializable
+Node <|.. Serializable
+interface Comparable<E>
+DataInterface <|-- Comparable
+AgeData <|.. DataInterface
+
+
+@enduml

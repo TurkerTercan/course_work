@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"HW1","l":"Administrator"},{"l":"All Classes","url":"allclasses-index.html"},{"p":"HW1","l":"AutomationSystem"},{"p":"HW1","l":"Branch"},{"p":"HW1","l":"BranchEmployee"},{"p":"HW1","l":"Customer"},{"p":"HW1","l":"Personnel"},{"p":"HW1","l":"Shipment"},{"p":"HW1","l":"Test"},{"p":"HW1","l":"TransportPersonnel"}]

@@ -1,0 +1,131 @@
+@startuml
+abstract class AbstractList
+abstract class AbstractCollection
+interface Deque
+interface ListIterator
+
+class RecursiveMethods{
+    +{static} reverseString(String) : String
+    +{static} elfishWord(String) : boolean
+    -{static} elfishRecursive(String, boolean, boolean, boolean) : boolean
+    +{static} recursiveSelectionSort(int[], int, int) :
+    -{static} findMinimumIndex(int[], int, int) : int
+    -{static} OPERATORS : String
+    -{static} calculateOperator(char, Stack<Integer>) : int
+    -{static} calculateOperatorReverse(char, Stack<Integer>): int
+    -{static} isOperator(char) : boolean
+    +{static} EvaluatePrefix(String) : int
+    +{static} EvaluatePostfix(String) : int
+    +{static} prefix(String, Stack<Integer>) : int
+    -{static} postfix(String, Stack<Integer>) : int
+    +{static} printPattern(int[][], int, int) :
+    -{static} recursivePrint(int[][], int, int, int, int) :
+    -{static} printTopLine(int[][], int, int, int, int) :
+    -{static} printRightLine(int[][], int, int, int, int) :
+    -{static} printBottomLine(int[][], int, int, int, int) :
+    -{static} printLeftLine(int[][], int, int, int, int) :
+}
+
+class MyDequeClass<E>{
+    -final mylist : MyLinkedList<E>
+    -final removed : RemovedLinkedList<E>
+    +add(E) : boolean
+    +iterator(): Iterator<E>
+    +descendingIterator() : Iterator<E>
+    +addFirst(E) :
+    +addLast(E) :
+    +offerFirst(E) : boolean
+    +offerLast(E) : boolean
+    +removeFirst() : E
+    +removeLast() : E
+    +pollFirst() : E
+    +pollLast() : E
+    +getFirst() : E
+    +getLast() : E
+    +peekFirst() : E
+    +peekLast() : E
+    +removeFirstOccurrence(Object) : boolean
+    +removeLastOccurrence(Object) : boolean
+    +offer(E) : boolean
+    +remove() : E
+    +poll() : E
+    +element() : E
+    +peek() : E
+    +push() : E
+    +pop() : E
+    +size() : int
+    +toString() : String
+}
+
+class MyLinkedList<E>{
+    -head : Node<E>
+    -tail : Node<E>
+    -removed : RemovedLinkedList<E>
+    -size : int
+    +size() : int
+    +get() : E
+    +addFirst(E) :
+    +addLast(E) :
+    +add(E) : boolean
+    +iterator(): Iterator<E>
+    +descendingIterator(): Iterator<E>
+    +listIterator(int) : ListIterator<E>
+    +listIterator() : ListIterator<E>
+}
+
+class MyListIterator{
+    -nextItem : Node<E>
+    -lastItemReturned : Node<E>
+    -index : int
+    +hasNext() : boolean
+    +next() : E
+    +hasPrevious() : boolean
+    +previous() : E
+    +nextIndex() : int
+    +previousIndex() : int
+    +remove() :
+    +add() :
+    +set() :
+}
+
+class RemovedLinkedList<E>{
+    -head : Node<E>
+    -tail : Node<E>
+    -size : int
+    +addNode(Node<E>) :
+    +removeNode() : Node<E>
+    +size() : int
+    +get() : E
+    +addFirst(E) :
+    +addLast(E) :
+    +add(E) : boolean
+    +iterator(): Iterator<E>
+    +descendingIterator(): Iterator<E>
+    +listIterator(int) : ListIterator<E>
+    +listIterator() : ListIterator<E>
+}
+
+class Node<E>{
+    +data : E
+    +next : Node<E>
+    +prev : Node<E>
+}
+
+MyListIterator <|.. ListIterator
+MyLinkedList <|-- AbstractList
+RemovedLinkedList <|-- AbstractList
+MyLinkedList *-- Node
+MyLinkedList *-- MyListIterator
+RemovedLinkedList *-- Node
+RemovedLinkedList *-- MyListIterator
+
+MyDequeClass *-- RemovedLinkedList
+MyDequeClass *-- MyLinkedList
+MyDequeClass <|-- AbstractCollection
+MyDequeClass <|.. Deque
+
+class SyntaxErrorException{
+}
+
+SyntaxErrorException <|-- Exception
+@enduml

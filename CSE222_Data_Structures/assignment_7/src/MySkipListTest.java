@@ -1,0 +1,71 @@
+import java.util.*;
+
+public class MySkipListTest {
+    public static void main(String[] args) {
+        MySkipList<Integer> test = new MySkipList<>(4);
+        System.out.println(test.toString());
+        test.add(-5);
+        System.out.println(test.toString());
+        test.add(0);
+        System.out.println(test.toString());
+        test.add(5);
+        System.out.println(test.toString());
+        test.add(10);
+        System.out.println(test.toString());
+        test.add(3);
+        System.out.println(test.toString());
+        test.add(15);
+        System.out.println(test.toString());
+        test.add(20);
+        System.out.println(test.toString());
+        test.add(-10);
+        System.out.println(test.toString());
+        test.add(9);
+        System.out.println(test.toString());
+        test.add(7);
+        System.out.println(test.toString());
+        test.add(17);
+        System.out.println(test.toString());
+        test.add(25);
+        System.out.println(test.toString());
+        test.remove(5);
+        System.out.println(test.toString());
+        test.remove(10);
+        System.out.println(test.toString());
+        test.remove(7);
+        System.out.println(test.toString());
+
+        MySkipList<Integer> test2 = new MySkipList<>(5);
+        System.out.println(test2.toString());
+        test2.add(-5);
+        System.out.println(test2.toString());
+        test2.add(0);
+        System.out.println(test2.toString());
+        test2.add(5);
+        System.out.println(test2.toString());
+        test2.add(10);
+        System.out.println(test2.toString());
+        test2.add(3);
+        System.out.println(test2.toString());
+        test2.add(15);
+        System.out.println(test2.toString());
+        test2.add(20);
+        System.out.println(test2.toString());
+        test2.add(-10);
+        System.out.println(test2.toString());
+        test2.add(9);
+        System.out.println(test2.toString());
+        test2.add(7);
+        System.out.println(test2.toString());
+        test2.add(17);
+        System.out.println(test2.toString());
+        test2.add(25);
+        System.out.println(test2.toString());
+        test2.remove(5);
+        System.out.println(test2.toString());
+        test2.remove(10);
+        System.out.println(test2.toString());
+        test2.remove(7);
+        System.out.println(test2.toString());
+    }
+}
